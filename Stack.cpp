@@ -120,9 +120,11 @@ void Stack::pop(SElement & str)
     }
     else
     {
+        SNodePtr temp;
+        temp = top;
         str = top->element;
-        delete top;
         top = top->next;
+        delete temp;
     }
 }
 
